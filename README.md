@@ -12,12 +12,17 @@ Requires Python and Pip to be installed
 $ git clone https://github.com/toniclairedavid/inventory-management-app
 ```
 
-2. Create a virtual environment and install the flask.
+2. Create a virtual environment.
 
 ```bash
 $ virtualenv inventory-management-app
 $ . inventory-management-app/bin/activate  # on Windows, use "inventory-management-app\Scripts\activate" instead
-$ pip install flask
+```
+
+3. Download app requirements.
+
+```bash
+$ pip install -r requirements.txt
 ```
 
 3. To ensure that the application runs, go to the directory that contains "app.py"
