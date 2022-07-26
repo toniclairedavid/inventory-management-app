@@ -35,8 +35,16 @@ $ pip install -r requirements.txt
 
 **Before run the application, make sure you have activated the virtual enviroment:**
 
+To run the app: 
+
 ```bash
 $ flask run
+```
+
+To run the notification system, while the app is closed:
+
+```bash
+$ python email_notif_buffer_check.py
 ```
 
 ## Screenshots
