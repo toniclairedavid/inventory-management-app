@@ -6,7 +6,7 @@ Requires Python and Pip to be installed
 
 ## Installation
 
-1. Close the git repo.
+1. Clone the git repo.
 
 ```bash
 $ git clone https://github.com/toniclairedavid/inventory-management-app
