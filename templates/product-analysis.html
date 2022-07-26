@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Product Analysis
+{% endblock %}
+
+
+{% block content %}
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">Product Analysis</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="/index/">Dashboard</a></li>
+            <li class="breadcrumb-item"><a href="/product/">Products</a></li>
+            <li class="breadcrumb-item active">Product Analysis</li>
+        </ol>
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table mr-1"></i>
+                    Overall Sales Per Product
+            </div>
+                <div class="card-body">
+                    <!-- <div><img src='overall_plot.png'/></div> -->
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Total Units Sold</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for product in overall %}
+                                <tr>
+                                    <td>{{ product[0] }}</td>
+                                    <td>{{ product[1] }}</td>
+                                </tr>    
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table mr-1"></i>
+                    Total Monthly Sale Per Product
+            </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Year-Month</th>
+                                    <th>Total Units Sold</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for product in monthly %}
+                                <tr>
+                                    <td>{{ product[0] }}</td>
+                                    <td>{{ product[1] }}</td>
+                                    <td>{{ product[2] }}</td>
+                                </tr>    
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

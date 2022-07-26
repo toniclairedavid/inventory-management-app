@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Inventory Management App
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">User's Guide</h1>
+        <ol class="breadcrumb mb-4">
+        </ol>
+            <div style="height:600px; margin:50px;">
+                <h3>Dashboard </h3>
+                <p>The dashboard consists of the Products table and Customers Table. The Products table consists of all the products and their corresponding information that was integrated into the system. Similarly, the Customers table consists of all customers and their corresponding data that was added into the system.</p>
+                <br>
+                <h3>Products</h3>
+                <br>
+                <h5>View Product Analysis</h5>
+                <p>Click Product Analysis to see the Overall Sales Per Product table and the Total Monthly Sale Per Product table. The Overall Sales Per Product table contains the product name and the number of units sold. Underneath is the Total Monthly Sale Per Product table that consists of the product name, the year and month they were sold, and the total units sold within the stated period. You can click on either Dashboard or Products to return to the respective pages. </p>
+                <br>
+                <h5>Inputting a New Product</h5>
+                <p>To add a new product into the system, fill up the Product Name, Product Description, and Product Quantity fields. After doing so, click the Submit button. You would then see the previously inputted information in the Products Table below.</p>
+                <br>
+                <h5>Products Table</h5>
+                <p>The Products Table consists of the Product Name, Short Description, Quantity, Date Added, Date Modified, and Actions columns. Under the Quantity column, Add to Stock can be seen underneath the respective numbers to increase the stock quantity of the particular item in the same row. The Date Added column reflects the exact moment that you input the Product Name, Product Description, and Quantity in the same row. Meanwhile, the Date Modified column shows the instance that you updated the Product Name, Product Description, and/ or Quantity. Under the Actions column, there is the Delete function that allows you to remove the entire row and the Update function that allows you to update Product Name, Product Description, and/ or Quantity.</p>
+                <br>
+                <h3>Order History</h3>
+                <br>
+                <h5>Inputting a New Order</h5>
+                <p>To add a new order into the system, you must first choose a Product Name and Customer Name from the drop-down menu. If the name of a particular customer has not yet been integrated into the system, you may press on the Click here to add a new customer function. Afterwards, fill up the Product Quantity and Order Description fields. Once you have finished inputting the necessary data, click the Submit button. You would then be able to see the previously inputted information in the Order Table below.</p>
+                <br>
+                <h5>Orders Table</h5>
+                <p>The Order Table consists of the ID, Product Name, Product Quantity, Customer Name, Order Description, Order Date, Received Date, and Actions columns. The Order Description consists of the notes that may have been provided by the customers when it comes to delivering their orders. The Order Date column shows the instance that the order has been placed. Once the customer has received the order, you can click the Receive function in the Received Date column that would reflect the period of receipt. Under the Actions column, there is the Delete function that allows you to remove the entire row. </p>
+                <br>
+                <h3>Customers</h3>
+                <br>
+                <h5>Inputting a New Customer</h5>
+                <p>To add a new customer into the system, fill up the Customer Name, Customer Mobile No., Customer Email Address and Customer Address fields. After doing so, click the Submit button. After doing so, you will see the previously registered information in the Customer Table below. </p>
+                <br>
+                <h5>Customers Table</h5>
+                <p>The Customer Table consists of the Customer Name, Customer Mobile No., Customer Email Address, Customer Address, Date Added, Date Modified, and Actions columns. The Date Added column reflects the exact moment that you input the Customer Name, Customer Mobile No., Customer Email Address and Customer Address in the same row. Meanwhile, the Date Modified column shows the instance that you updated the Customer Name, Customer Mobile No., Customer Email Address and/or Customer Address Under the Actions column, there is the Delete function that allows you to remove the entire row and the Update function that allows you to update Customer Name, Customer Mobile No., Customer Email Address and/or Customer Address.</p>
+            </div>
+    </div>
+</main>
+            
+
+{% endblock %}

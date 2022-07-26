@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Update Customer
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">Customers</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="/index/">Dashboard</a></li>
+            <li class="breadcrumb-item"><a href="/customer/">Customers</a></li>
+            <li class="breadcrumb-item active">Update Customer</li>
+        </ol>
+        <div class="card mb-4">
+            <div class="card-header">New Customer</div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="name">Customer Name</label>
+                        <input type="text" name="customer_name" placeholder="Input Customer Name" 
+                        class="form-control" value="{{ request.form['customer_name'] }}"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="summary">Customer Mobile No.</label>
+                        <input type="text" name="customer_mobile" placeholder="Input Customer Mobile No." 
+                        class="form-control" value="{{ request.form['customer_mobile'] }}"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="summary">Customer Email Address</label>
+                        <input type="text" name="customer_email" placeholder="Input Customer Email Address" 
+                        class="form-control" value="{{ request.form['customer_email'] }}"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="summary">Customer Address</label>
+                        <input type="text" name="customer_address" placeholder="Input Customer Address" 
+                        class="form-control" value="{{ request.form['customer_address'] }}"></input>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
