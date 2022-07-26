@@ -40,7 +40,6 @@ def check_stock(): ## checking if stock is above buffer level
     product_qty_result = cursor.execute('SELECT productName, SUM(quantity) FROM order_item GROUP BY productName').fetchall() 
 
     for row in product_qty_result: #loops each product and extracts the sum(quantity) and puts it in a numpy array
-        print("h4")
         prod_name = str(row[0])
         total_prod_qty = int(row[1]) 
         products = np.append(products, prod_name) 
@@ -49,7 +48,6 @@ def check_stock(): ## checking if stock is above buffer level
     lead_time_result = cursor.execute('SELECT productName, JULIANDAY(receivedOn) - JULIANDAY(orderedOn) + 1 AS date_difference FROM order_item GROUP BY productName').fetchall() ## gets the lead time (time between ordering and receiving an item)
 
     for row in lead_time_result: #loops each product and extracts the sum(quantity) and puts it in a numpy array
-        print("h6", row[1])
         prod_lead_time = int(row[1]) 
         lead_time = np.append(lead_time, prod_lead_time)
 
