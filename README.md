@@ -19,16 +19,16 @@ $ virtualenv inventory-management-app
 $ . inventory-management-app/bin/activate  # on Windows, use "inventory-management-app\Scripts\activate" instead
 ```
 
-3. Download app requirements.
-
-```bash
-$ pip install -r requirements.txt
-```
-
-4. To ensure that the application runs, go to the directory that contains "app.py"
+3. Go to the directory that contains "app.py" and "requirements.txt"
 
 ```bash
 $ cd inventory-management-app
+```
+
+4. Download app requirements.
+
+```bash
+$ pip install -r requirements.txt
 ```
 
 ## How to Run the Application?
