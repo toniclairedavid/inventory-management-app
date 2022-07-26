@@ -25,7 +25,7 @@ $ . inventory-management-app/bin/activate  # on Windows, use "inventory-manageme
 $ pip install -r requirements.txt
 ```
 
-3. To ensure that the application runs, go to the directory that contains "app.py"
+4. To ensure that the application runs, go to the directory that contains "app.py"
 
 ```bash
 $ cd inventory-management-app
